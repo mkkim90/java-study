@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="week4.LinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-15T13:25:02" hostname="DESKTOP-H9PS8JB" time="0.018">
+  <properties/>
+  <testcase name="Node()" classname="week4.LinkedListTest" time="0.018"/>
+  <system-out><![CDATA[Test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
