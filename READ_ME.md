@@ -59,3 +59,78 @@ public class Queue {
      }
 }
 ```
+
+
+```
+class LinkedQueue{
+    Node front;    
+    Node rear;
+    
+    public LinkedQueue() {
+        front = null;
+        rear = null;
+    }
+    
+    public boolean isEmpty() {
+        return front == null;    
+    }
+    
+    public boolean offer(int data) {
+        Node newNode = new Node();
+        newNode.setData(data);
+        newNode.setNext(null);
+        if (isEmpty()) {
+            front = newNode;
+            rear = newNode;
+            return true;
+        }
+        
+        rear.setNext(newNode);
+        rear = rear.getNext();
+        return true;
+    }
+    
+    public int poll() {
+        if (isEmpty()) {
+            System.out.println("poll fail LinkedQueue is empty");
+            return 0;
+        }
+        
+        int pollData = front.getData();
+        front = front.getNext();
+        return pollData;
+    }
+    
+	public static void main(String[] args){
+		LinkedQueue queue = new LinkedQueue();
+        queue.offer(3);
+        queue.offer(4);
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        //System.out.println(node.getData());
+	}
+}
+
+
+class Node {
+    private Node next;
+    private int data;
+    
+    public void setNext(Node next) {
+        this.next = next;
+    }
+    
+    public Node getNext() {
+        return this.next;
+    }
+    
+    public void setData(int data) {
+        this.data = data;
+    }
+    
+    public int getData() {
+        return this.data;
+    }
+}
+
+```
