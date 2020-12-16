@@ -10,6 +10,6 @@ public class LinkedListTest {
     @DisplayName("node 생성")
     void Node() {
         Node node = new Node();
-        
+
     }
 }
